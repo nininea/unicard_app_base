@@ -1,0 +1,10 @@
+D:\Sources\Work\kunicardus\Kunicardus.Touch\obj\iPhoneSimulator\Debug\ibtool\_BundleResourceWithLogicalName.items
+D:\Sources\Work\kunicardus\Kunicardus.Touch\obj\iPhoneSimulator\Debug\actool\_PartialAppManifest.items
+D:\Sources\Work\kunicardus\Kunicardus.Touch\obj\iPhoneSimulator\Debug\actool\_BundleResourceWithLogicalName.items
+D:\Sources\Work\kunicardus\Kunicardus.Touch\obj\iPhoneSimulator\Debug\coremlc\_PartialAppManifest.items
+D:\Sources\Work\kunicardus\Kunicardus.Touch\obj\iPhoneSimulator\Debug\coremlc\_BundleResourceWithLogicalName.items
+D:\Sources\Work\kunicardus\Kunicardus.Touch\obj\iPhoneSimulator\Debug\optimized\
+D:\Sources\Work\kunicardus\Kunicardus.Touch\obj\iPhoneSimulator\Debug\Kunicardus-Touch.csprojAssemblyReference.cache
+D:\Sources\Work\kunicardus\Kunicardus.Touch\obj\iPhoneSimulator\Debug\Kunicardus.Touch.ApplicationStrings.resources
+D:\Sources\Work\kunicardus\Kunicardus.Touch\obj\iPhoneSimulator\Debug\Kunicardus-Touch.csproj.GenerateResource.cache
+D:\Sources\Work\kunicardus\Kunicardus.Touch\obj\iPhoneSimulator\Debug\Kunicardus-Touch.csproj.CoreCompileInputs.cache

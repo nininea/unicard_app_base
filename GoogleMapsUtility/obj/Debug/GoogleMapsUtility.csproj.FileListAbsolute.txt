@@ -1,0 +1,12 @@
+D:\Sources\Work\kunicardus\GoogleMapsUtility\bin\Debug\GoogleMapsUtility.dll
+D:\Sources\Work\kunicardus\GoogleMapsUtility\bin\Debug\GoogleMapsUtility.pdb
+D:\Sources\Work\kunicardus\GoogleMapsUtility\bin\Debug\Xamarin.Android.Support.v4.dll
+D:\Sources\Work\kunicardus\GoogleMapsUtility\bin\Debug\Xamarin.GooglePlayServices.Base.dll
+D:\Sources\Work\kunicardus\GoogleMapsUtility\obj\Debug\__AndroidLibraryProjects__.zip
+D:\Sources\Work\kunicardus\GoogleMapsUtility\obj\Debug\MonoAndroid,Version=v5.0.AssemblyAttributes.cs
+D:\Sources\Work\kunicardus\GoogleMapsUtility\obj\Debug\GoogleMapsUtility.csprojAssemblyReference.cache
+D:\Sources\Work\kunicardus\GoogleMapsUtility\obj\Debug\stamp\_BuildLibraryImportsCache.stamp
+D:\Sources\Work\kunicardus\GoogleMapsUtility\obj\Debug\GoogleMapsUtility.csproj.CoreCompileInputs.cache
+D:\Sources\Work\kunicardus\GoogleMapsUtility\obj\Debug\GoogleMapsUtility.csproj.CopyComplete
+D:\Sources\Work\kunicardus\GoogleMapsUtility\obj\Debug\GoogleMapsUtility.dll
+D:\Sources\Work\kunicardus\GoogleMapsUtility\obj\Debug\GoogleMapsUtility.pdb
