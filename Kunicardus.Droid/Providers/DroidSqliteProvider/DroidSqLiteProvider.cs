@@ -17,7 +17,7 @@ namespace Kunicardus.Droid.Providers.DroidSqLiteProvider
         {
             get
             {
-                return "";//Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal), "unicard5.db");
+                return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal), "unicard5.db");
             }
         }
 

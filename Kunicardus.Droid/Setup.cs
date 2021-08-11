@@ -12,6 +12,7 @@ using Kuni.Core.Plugins.IUIThreadPlugin;
 using Kuni.Core.Plugins.UIDialogPlugin;
 using Kuni.Core.Providers.LocalDBProvider;
 using Kuni.Core.Services.Abstract;
+using Kuni.Core.Services.Concrete;
 using Kuni.Core.UnicardApiProvider;
 using Kuni.Core.Utilities.Logger;
 using Kuni.Core.ViewModels;
@@ -122,7 +123,10 @@ namespace Kunicardus.Droid
 			Mvx.IoCProvider.RegisterType<ICustomSecurityProvider,CustomSecurityProvider> ();
 			Mvx.IoCProvider.RegisterType<IConfigReader, ConfigReader> ();
 			Mvx.IoCProvider.RegisterType<IGoogleAnalyticsService, GoogleAnalyticsDroid> ();
-		}
+            Mvx.IoCProvider.RegisterType<IUserService, UserService>();
+            Mvx.IoCProvider.RegisterType<IProductsService, ProductsService>();
+            Mvx.IoCProvider.RegisterType<INewsService, NewsService>();
+        }
 
         protected override void InitializeViewLookup()
         {
@@ -132,25 +136,25 @@ namespace Kunicardus.Droid
                 { typeof (LoginAuthViewModel), typeof(LoginAuthView) },
                 { typeof (BaseRegisterViewModel), typeof(BaseRegisterView) },
                 { typeof (BaseResetPasswordViewModel), typeof(BaseResetPasswordView) },
-                //{ typeof (AboutViewModel), typeof(AboutFragment) },
-                //{ typeof (BuyProductViewModel), typeof(BuyProductFragment) },
-                //{ typeof (BaseCatalogViewModel), typeof(BaseCatalogFragment) },
-                //{ typeof (CatalogDetailViewModel), typeof(CatalogDetailFragment) },
-                //{ typeof (CatalogListViewModel), typeof(CatalogListViewFragment) },
-                //{ typeof (ChangePasswordViewModel), typeof(ChangePasswordFragment) },
-                //{ typeof (MenuViewModel), typeof(MenuFragment) },
-                //{ typeof (ChooseCardExistanceViewModel), typeof(ChooseCardExistanceViewFragment) },
-                //{ typeof (EmailRegistrationViewModel), typeof(EmailRegistrationFragment) },
-                //{ typeof (FBRegisterViewModel), typeof(FBRegisterFragment) },
-                //{ typeof (HomePageViewModel), typeof(HomePageFragment) },
-                //{ typeof (OrganisationListViewModel), typeof(OrganisationListFragment) },
-                //{ typeof (PinViewModel), typeof(SettingsPinFragment) },
-                //{ typeof (SMSVerificationViewModel), typeof(SMSVerificationFragment) },
-                //{ typeof (TabsViewModel), typeof(tabs) },
-                //{ typeof (TransactionVerificationViewModel), typeof(TransactionVerificationFragment) },
-                //{ typeof (UnicardNumberInputViewModel), typeof(UnicardInputFragment) },
-                //{ typeof (MyPageViewModel), typeof(MyPageFragment) },
-                //{ typeof (NewsListViewModel), typeof(NewsListFragment) },
+                { typeof (AboutViewModel), typeof(AboutFragment) },
+                { typeof (BuyProductViewModel), typeof(BuyProductFragment) },
+                { typeof (BaseCatalogViewModel), typeof(BaseCatalogFragment) },
+                { typeof (CatalogDetailViewModel), typeof(CatalogDetailFragment) },
+                { typeof (CatalogListViewModel), typeof(CatalogListViewFragment) },
+                { typeof (ChangePasswordViewModel), typeof(ChangePasswordFragment) },
+                { typeof (MenuViewModel), typeof(MenuFragment) },
+                { typeof (ChooseCardExistanceViewModel), typeof(ChooseCardExistanceViewFragment) },
+                { typeof (EmailRegistrationViewModel), typeof(EmailRegistrationFragment) },
+                { typeof (FBRegisterViewModel), typeof(FBRegisterFragment) },
+                { typeof (HomePageViewModel), typeof(HomePageFragment) },
+                { typeof (OrganisationListViewModel), typeof(OrganisationListFragment) },
+                { typeof (PinViewModel), typeof(SettingsPinFragment) },
+                { typeof (SMSVerificationViewModel), typeof(SMSVerificationFragment) },
+               // { typeof (TabsViewModel), typeof(tabs) },
+                { typeof (TransactionVerificationViewModel), typeof(TransactionVerificationFragment) },
+                { typeof (UnicardNumberInputViewModel), typeof(UnicardInputFragment) },
+                { typeof (MyPageViewModel), typeof(MyPageFragment) },
+                { typeof (NewsListViewModel), typeof(NewsListFragment) },
                 { typeof (ImageSliderViewModel), typeof(ImageSliderAdapter) },
                 { typeof (MainViewModel), typeof(MainView) },
                 { typeof (MerchantsViewModel), typeof(MerchantsView) },
