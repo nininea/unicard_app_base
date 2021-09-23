@@ -9,7 +9,7 @@
     <include
         android:id="@+id/toolbar"
         layout="@layout/searchtoolbar" />
-    <android.support.v4.widget.SwipeRefreshLayout
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:id="@+id/refresher"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -23,5 +23,5 @@
             local:MvxItemTemplate="@layout/partnerlistitemlayout"
             android:background="@android:color/white"
             android:visibility="visible" />
-    </android.support.v4.widget.SwipeRefreshLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 </RelativeLayout>

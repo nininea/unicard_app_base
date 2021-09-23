@@ -22,6 +22,7 @@ using Kunicardus.Droid.Plugins;
 using Xamarin.Facebook.Login;
 using MvvmCross.Droid.Support.V4;
 using Android.Support.V4.Widget;
+using MvvmCross.Platforms.Android.Presenters.Attributes;
 
 namespace Kunicardus.Droid
 {
@@ -29,7 +30,7 @@ namespace Kunicardus.Droid
 		ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait, 
 		LaunchMode = Android.Content.PM.LaunchMode.SingleTop,
 		Name = "ge.unicard.unicardmobileapp.MainView")]
-	[MvxViewFor (typeof(MainViewModel))]
+	[MvxActivityPresentationAttribute]
 	public class MainView : MvxFragmentActivity,  View.IOnTouchListener
 	{
 		#region Values and fields
@@ -214,9 +215,9 @@ namespace Kunicardus.Droid
 		{
 			SetContentView (Resource.Layout.MainView);
 
-			_dialog = new ProgressDialog (this);
-			_dialog.SetMessage (Resources.GetString (Resource.String.loading));
-			_dialog.Show ();
+			//_dialog = new ProgressDialog (this);
+			//_dialog.SetMessage (Resources.GetString (Resource.String.loading));
+			//_dialog.Show ();
 
 			_bigCardNumber = FindViewById<BaseTextView> (Resource.Id.bigCardNumber);
 			FindViewById<RelativeLayout> (Resource.Id.bigCardNL).Animate ().Rotation (90);
@@ -253,7 +254,7 @@ namespace Kunicardus.Droid
 			var pageMargin = (int)TypedValue.ApplyDimension (ComplexUnitType.Dip, 4, Resources.DisplayMetrics);
 			pager.PageMargin = pageMargin;
 			pager.PageSelected += (o, e) => adapter.ActivateFragment (e.Position);
-			_dialog.Dismiss ();
+			//_dialog.Dismiss ();
 		}
 
 		protected override void OnStart ()

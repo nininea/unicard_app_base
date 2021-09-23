@@ -13,7 +13,7 @@ namespace Kunicardus.Droid.Views
         LaunchMode = Android.Content.PM.LaunchMode.SingleTop,
         NoHistory = true,
         ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]
-    public class LoginAuthView : MvxFragmentActivity
+    public class LoginAuthView : MvxFragmentActivity<LoginAuthViewModel>
     {
         #region Native Methods
 

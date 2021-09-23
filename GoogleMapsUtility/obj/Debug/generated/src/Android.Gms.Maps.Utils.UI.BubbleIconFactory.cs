@@ -9,32 +9,37 @@ namespace Android.Gms.Maps.Utils.UI {
 	[ObsoleteAttribute (@"This class is obsoleted in this android platform")]
 	[global::Android.Runtime.Register ("com/google/maps/android/ui/BubbleIconFactory", DoNotGenerateAcw=true)]
 	public partial class BubbleIconFactory : global::Java.Lang.Object {
-
 		static readonly JniPeerMembers _members = new XAPeerMembers ("com/google/maps/android/ui/BubbleIconFactory", typeof (BubbleIconFactory));
+
 		internal static IntPtr class_ref {
-			get {
-				return _members.JniPeerType.PeerReference.Handle;
-			}
+			get { return _members.JniPeerType.PeerReference.Handle; }
 		}
 
+		[global::System.Diagnostics.DebuggerBrowsable (global::System.Diagnostics.DebuggerBrowsableState.Never)]
+		[global::System.ComponentModel.EditorBrowsable (global::System.ComponentModel.EditorBrowsableState.Never)]
 		public override global::Java.Interop.JniPeerMembers JniPeerMembers {
 			get { return _members; }
 		}
 
+		[global::System.Diagnostics.DebuggerBrowsable (global::System.Diagnostics.DebuggerBrowsableState.Never)]
+		[global::System.ComponentModel.EditorBrowsable (global::System.ComponentModel.EditorBrowsableState.Never)]
 		protected override IntPtr ThresholdClass {
 			get { return _members.JniPeerType.PeerReference.Handle; }
 		}
 
+		[global::System.Diagnostics.DebuggerBrowsable (global::System.Diagnostics.DebuggerBrowsableState.Never)]
+		[global::System.ComponentModel.EditorBrowsable (global::System.ComponentModel.EditorBrowsableState.Never)]
 		protected override global::System.Type ThresholdType {
 			get { return _members.ManagedPeerType; }
 		}
 
-		protected BubbleIconFactory (IntPtr javaReference, JniHandleOwnership transfer) : base (javaReference, transfer) {}
+		protected BubbleIconFactory (IntPtr javaReference, JniHandleOwnership transfer) : base (javaReference, transfer)
+		{
+		}
 
 		// Metadata.xml XPath constructor reference: path="/api/package[@name='com.google.maps.android.ui']/class[@name='BubbleIconFactory']/constructor[@name='BubbleIconFactory' and count(parameter)=0]"
 		[Register (".ctor", "()V", "")]
-		public unsafe BubbleIconFactory ()
-			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
+		public unsafe BubbleIconFactory () : base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
 			const string __id = "()V";
 

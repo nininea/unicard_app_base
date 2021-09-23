@@ -10,10 +10,10 @@
       "Kuni.Core/1.0.0": {
         "dependencies": {
           "Microsoft.CSharp": "4.5.0",
-          "MvvmCross": "6.2.3",
-          "MvvmCross.Plugin.Color": "6.2.3",
-          "MvvmCross.Plugin.File": "6.2.3",
-          "MvvmCross.Plugin.Network": "6.2.3",
+          "MvvmCross": "8.0.2",
+          "MvvmCross.Plugin.Color": "8.0.2",
+          "MvvmCross.Plugin.File": "7.0.1",
+          "MvvmCross.Plugin.Network": "7.0.1",
           "NETStandard.Library": "2.0.3",
           "Newtonsoft.Json": "12.0.3",
           "System.ComponentModel.TypeConverter": "4.3.0",
@@ -34,47 +34,58 @@
           }
         }
       },
-      "Microsoft.NETCore.Platforms/1.1.0": {},
-      "Microsoft.NETCore.Targets/1.1.0": {},
-      "MvvmCross/6.2.3": {
+      "Microsoft.Extensions.Logging.Abstractions/5.0.0": {
         "runtime": {
-          "lib/netstandard2.0/MvvmCross.dll": {
-            "assemblyVersion": "6.2.3.0",
-            "fileVersion": "6.2.3.0"
+          "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.20.51904"
           }
         }
       },
-      "MvvmCross.Plugin.Color/6.2.3": {
+      "Microsoft.NETCore.Platforms/1.1.0": {},
+      "Microsoft.NETCore.Targets/1.1.0": {},
+      "MvvmCross/8.0.2": {
         "dependencies": {
-          "MvvmCross": "6.2.3"
+          "Microsoft.Extensions.Logging.Abstractions": "5.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/MvvmCross.dll": {
+            "assemblyVersion": "8.0.2.0",
+            "fileVersion": "8.0.2.0"
+          }
+        }
+      },
+      "MvvmCross.Plugin.Color/8.0.2": {
+        "dependencies": {
+          "MvvmCross": "8.0.2"
         },
         "runtime": {
           "lib/netstandard2.0/MvvmCross.Plugin.Color.dll": {
-            "assemblyVersion": "6.2.3.0",
-            "fileVersion": "6.2.3.0"
+            "assemblyVersion": "8.0.2.0",
+            "fileVersion": "8.0.2.0"
           }
         }
       },
-      "MvvmCross.Plugin.File/6.2.3": {
+      "MvvmCross.Plugin.File/7.0.1": {
         "dependencies": {
-          "MvvmCross": "6.2.3"
+          "MvvmCross": "8.0.2"
         },
         "runtime": {
           "lib/netstandard2.0/MvvmCross.Plugin.File.dll": {
-            "assemblyVersion": "6.2.3.0",
-            "fileVersion": "6.2.3.0"
+            "assemblyVersion": "7.0.1.0",
+            "fileVersion": "7.0.1.0"
           }
         }
       },
-      "MvvmCross.Plugin.Network/6.2.3": {
+      "MvvmCross.Plugin.Network/7.0.1": {
         "dependencies": {
-          "MvvmCross": "6.2.3",
-          "MvvmCross.Plugin.File": "6.2.3"
+          "MvvmCross": "8.0.2",
+          "MvvmCross.Plugin.File": "7.0.1"
         },
         "runtime": {
           "lib/netstandard2.0/MvvmCross.Plugin.Network.dll": {
-            "assemblyVersion": "6.2.3.0",
-            "fileVersion": "6.2.3.0"
+            "assemblyVersion": "7.0.1.0",
+            "fileVersion": "7.0.1.0"
           }
         }
       },
@@ -515,6 +526,13 @@
       "path": "microsoft.csharp/4.5.0",
       "hashPath": "microsoft.csharp.4.5.0.nupkg.sha512"
     },
+    "Microsoft.Extensions.Logging.Abstractions/5.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-NxP6ahFcBnnSfwNBi2KH2Oz8Xl5Sm2krjId/jRR3I7teFphwiUoUeZPwTNA21EX+5PtjqmyAvKaOeBXcJjcH/w==",
+      "path": "microsoft.extensions.logging.abstractions/5.0.0",
+      "hashPath": "microsoft.extensions.logging.abstractions.5.0.0.nupkg.sha512"
+    },
     "Microsoft.NETCore.Platforms/1.1.0": {
       "type": "package",
       "serviceable": true,
@@ -529,33 +547,33 @@
       "path": "microsoft.netcore.targets/1.1.0",
       "hashPath": "microsoft.netcore.targets.1.1.0.nupkg.sha512"
     },
-    "MvvmCross/6.2.3": {
+    "MvvmCross/8.0.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-SXUTzVtwh2T0IBxLWkmalxWMFhY71Ib2So67oXWxd4FGlqTmqmaaG/JfI36czEeyEdbaXvSaveYFf7qanoOmnA==",
-      "path": "mvvmcross/6.2.3",
-      "hashPath": "mvvmcross.6.2.3.nupkg.sha512"
+      "sha512": "sha512-WsAKYGpLA0pkK5fVuQGGtYi4KmLKph4VUeknPJDUQHerPxQVlEyKg+4kaht010/mogIZUScBPmAfl4jFZstz8w==",
+      "path": "mvvmcross/8.0.2",
+      "hashPath": "mvvmcross.8.0.2.nupkg.sha512"
     },
-    "MvvmCross.Plugin.Color/6.2.3": {
+    "MvvmCross.Plugin.Color/8.0.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-uDX/B3tZrxLqYb9pr+Z/5kvhor/M6/vHj/aL7ycAw/lC3cnCdJ3PhfuF8tJhiKf9U/sdRWfzO+Sehhid0/Bqvg==",
-      "path": "mvvmcross.plugin.color/6.2.3",
-      "hashPath": "mvvmcross.plugin.color.6.2.3.nupkg.sha512"
+      "sha512": "sha512-psHWCDxSIhvj67dRPfJpSTMVBgmXi01z3e0R+LpUOOU3gpSXz6Ks9f55CKff4T8qhs81OUwoAJknPuYJlZokBw==",
+      "path": "mvvmcross.plugin.color/8.0.2",
+      "hashPath": "mvvmcross.plugin.color.8.0.2.nupkg.sha512"
     },
-    "MvvmCross.Plugin.File/6.2.3": {
+    "MvvmCross.Plugin.File/7.0.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-AxYo7HNbOnDK1Ufglj1QtPzbi+p5c9Vmhoc8ykfYAY3y7xwoPQ0slA3OXX+bsOg9A82Eeb0cin6GHujdWTjEvQ==",
-      "path": "mvvmcross.plugin.file/6.2.3",
-      "hashPath": "mvvmcross.plugin.file.6.2.3.nupkg.sha512"
+      "sha512": "sha512-KvY/6VmSY1xcyRMz2SXtFiEw9IsVDBeKkvU4g6yDjO3m5lKxYK0Pz9pzw0rOoG31ybaF5BIRXODhA4rN7t3qDg==",
+      "path": "mvvmcross.plugin.file/7.0.1",
+      "hashPath": "mvvmcross.plugin.file.7.0.1.nupkg.sha512"
     },
-    "MvvmCross.Plugin.Network/6.2.3": {
+    "MvvmCross.Plugin.Network/7.0.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-htHCF679Hrl1aXWqnikefSX/aRF4ssY5EKkZE1qiAfWT3xFospPP1Ns5mDdkYnD1Ers/HjCNAGU4RhfM4om0wQ==",
-      "path": "mvvmcross.plugin.network/6.2.3",
-      "hashPath": "mvvmcross.plugin.network.6.2.3.nupkg.sha512"
+      "sha512": "sha512-MBFXWLg+pYKLgst9aRNtNO4M0YdQcaNkc/QnvxL6EbyBltTQ1L8TSkDQ1xQ2bP5o5+dH/8as7nj97vDgTeMs/w==",
+      "path": "mvvmcross.plugin.network/7.0.1",
+      "hashPath": "mvvmcross.plugin.network.7.0.1.nupkg.sha512"
     },
     "NETStandard.Library/2.0.3": {
       "type": "package",

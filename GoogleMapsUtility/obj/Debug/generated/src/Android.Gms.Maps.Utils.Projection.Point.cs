@@ -9,32 +9,37 @@ namespace Android.Gms.Maps.Utils.Projection {
 	[ObsoleteAttribute (@"This class is obsoleted in this android platform")]
 	[global::Android.Runtime.Register ("com/google/maps/android/projection/Point", DoNotGenerateAcw=true)]
 	public partial class Point : global::Android.Gms.Maps.Utils.Geometry.Point {
-
 		static readonly JniPeerMembers _members = new XAPeerMembers ("com/google/maps/android/projection/Point", typeof (Point));
+
 		internal static new IntPtr class_ref {
-			get {
-				return _members.JniPeerType.PeerReference.Handle;
-			}
+			get { return _members.JniPeerType.PeerReference.Handle; }
 		}
 
+		[global::System.Diagnostics.DebuggerBrowsable (global::System.Diagnostics.DebuggerBrowsableState.Never)]
+		[global::System.ComponentModel.EditorBrowsable (global::System.ComponentModel.EditorBrowsableState.Never)]
 		public override global::Java.Interop.JniPeerMembers JniPeerMembers {
 			get { return _members; }
 		}
 
+		[global::System.Diagnostics.DebuggerBrowsable (global::System.Diagnostics.DebuggerBrowsableState.Never)]
+		[global::System.ComponentModel.EditorBrowsable (global::System.ComponentModel.EditorBrowsableState.Never)]
 		protected override IntPtr ThresholdClass {
 			get { return _members.JniPeerType.PeerReference.Handle; }
 		}
 
+		[global::System.Diagnostics.DebuggerBrowsable (global::System.Diagnostics.DebuggerBrowsableState.Never)]
+		[global::System.ComponentModel.EditorBrowsable (global::System.ComponentModel.EditorBrowsableState.Never)]
 		protected override global::System.Type ThresholdType {
 			get { return _members.ManagedPeerType; }
 		}
 
-		protected Point (IntPtr javaReference, JniHandleOwnership transfer) : base (javaReference, transfer) {}
+		protected Point (IntPtr javaReference, JniHandleOwnership transfer) : base (javaReference, transfer)
+		{
+		}
 
 		// Metadata.xml XPath constructor reference: path="/api/package[@name='com.google.maps.android.projection']/class[@name='Point']/constructor[@name='Point' and count(parameter)=2 and parameter[1][@type='double'] and parameter[2][@type='double']]"
 		[Register (".ctor", "(DD)V", "")]
-		public unsafe Point (double p0, double p1)
-			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
+		public unsafe Point (double p0, double p1) : base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
 			const string __id = "(DD)V";
 

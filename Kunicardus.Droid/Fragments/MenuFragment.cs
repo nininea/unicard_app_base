@@ -9,15 +9,15 @@ using MvvmCross.Droid.Support.V4;
 
 namespace Kunicardus.Droid
 {
-    public class MenuFragment : MvxFragment
+    public class MenuFragment : MvxFragment<MenuViewModel>
     {
         ListView _menuList;
         MenuAdapter _adapter;
 
-        public MenuFragment()
-        {
-            ViewModel = (MvvmCross.ViewModels.IMvxViewModel)Mvx.IoCProvider.IoCConstruct<MenuViewModel>();
-        }
+        //public MenuFragment()
+        //{
+        //    ViewModel = (MvvmCross.ViewModels.IMvxViewModel)Mvx.IoCProvider.IoCConstruct<MenuViewModel>();
+        //}
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {

@@ -47,7 +47,7 @@ namespace Kuni.Core
             else
             {
                 await _navigationService.Navigate<LoginViewModel>();
-            }
+            } 
         }
     }
 }

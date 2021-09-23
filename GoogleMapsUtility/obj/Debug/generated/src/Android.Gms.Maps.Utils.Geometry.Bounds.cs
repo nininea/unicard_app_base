@@ -9,8 +9,6 @@ namespace Android.Gms.Maps.Utils.Geometry {
 	[global::Android.Runtime.Register ("com/google/maps/android/geometry/Bounds", DoNotGenerateAcw=true)]
 	public partial class Bounds : global::Java.Lang.Object {
 
-
-
 		// Metadata.xml XPath field reference: path="/api/package[@name='com.google.maps.android.geometry']/class[@name='Bounds']/field[@name='maxX']"
 		[Register ("maxX")]
 		public double MaxX {
@@ -129,31 +127,38 @@ namespace Android.Gms.Maps.Utils.Geometry {
 				}
 			}
 		}
+
 		static readonly JniPeerMembers _members = new XAPeerMembers ("com/google/maps/android/geometry/Bounds", typeof (Bounds));
+
 		internal static IntPtr class_ref {
-			get {
-				return _members.JniPeerType.PeerReference.Handle;
-			}
+			get { return _members.JniPeerType.PeerReference.Handle; }
 		}
 
+		[global::System.Diagnostics.DebuggerBrowsable (global::System.Diagnostics.DebuggerBrowsableState.Never)]
+		[global::System.ComponentModel.EditorBrowsable (global::System.ComponentModel.EditorBrowsableState.Never)]
 		public override global::Java.Interop.JniPeerMembers JniPeerMembers {
 			get { return _members; }
 		}
 
+		[global::System.Diagnostics.DebuggerBrowsable (global::System.Diagnostics.DebuggerBrowsableState.Never)]
+		[global::System.ComponentModel.EditorBrowsable (global::System.ComponentModel.EditorBrowsableState.Never)]
 		protected override IntPtr ThresholdClass {
 			get { return _members.JniPeerType.PeerReference.Handle; }
 		}
 
+		[global::System.Diagnostics.DebuggerBrowsable (global::System.Diagnostics.DebuggerBrowsableState.Never)]
+		[global::System.ComponentModel.EditorBrowsable (global::System.ComponentModel.EditorBrowsableState.Never)]
 		protected override global::System.Type ThresholdType {
 			get { return _members.ManagedPeerType; }
 		}
 
-		protected Bounds (IntPtr javaReference, JniHandleOwnership transfer) : base (javaReference, transfer) {}
+		protected Bounds (IntPtr javaReference, JniHandleOwnership transfer) : base (javaReference, transfer)
+		{
+		}
 
 		// Metadata.xml XPath constructor reference: path="/api/package[@name='com.google.maps.android.geometry']/class[@name='Bounds']/constructor[@name='Bounds' and count(parameter)=4 and parameter[1][@type='double'] and parameter[2][@type='double'] and parameter[3][@type='double'] and parameter[4][@type='double']]"
 		[Register (".ctor", "(DDDD)V", "")]
-		public unsafe Bounds (double p0, double p1, double p2, double p3)
-			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
+		public unsafe Bounds (double p0, double p1, double p2, double p3) : base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
 			const string __id = "(DDDD)V";
 

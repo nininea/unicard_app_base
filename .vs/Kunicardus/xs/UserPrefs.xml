@@ -1,32 +1,64 @@
 ﻿<Properties StartupConfiguration="{5B9A160F-DBDF-4C41-9F9C-F75ACC98C43C}|Default">
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Kunicardus.Droid/Fragments/MenuFragment.cs">
+    <Files>
+      <File FileName="Kuni.Core/AppStart.cs" Line="44" Column="1" />
+      <File FileName="Kunicardus.Droid/Setup.cs" Line="184" Column="1" />
+      <File FileName="Kunicardus.Droid/Views/MainView.cs" Line="248" Column="25" />
+      <File FileName="Kuni.Core/Helpers/AppSettings/ConfigReader.cs" Line="20" Column="1" />
+      <File FileName="Kuni.Core/ViewModels/BaseViewModel.cs" Line="43" Column="1" />
+      <File FileName="Kuni.Core/ViewModels/MainViewModel.cs" Line="92" Column="1" />
+      <File FileName="Kunicardus.Droid/Fragments/MenuFragment.cs" Line="12" Column="18" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Kunicardus" expanded="True">
             <Node name="Kuni.Core" expanded="True">
-              <Node name="Models" expanded="True">
-                <Node name="DataTransferObjects" expanded="True">
-                  <Node name="CardStatusDTO.cs" selected="True" />
-                </Node>
+              <Node name="Dependencies" expanded="True">
+                <Node name="PackageDependencies" expanded="True" />
               </Node>
+              <Node name="Converters" expanded="True" />
+              <Node name="Helpers" expanded="True">
+                <Node name="AppSettings" expanded="True" />
+              </Node>
+              <Node name="ViewModels" expanded="True" />
             </Node>
             <Node name="Kunicardus.Droid" expanded="True">
-              <Node name="References" expanded="True" />
               <Node name="Packages" expanded="True" />
+              <Node name="Fragments" expanded="True">
+                <Node name="MenuFragment.cs" selected="True" />
+              </Node>
               <Node name="Properties" expanded="True" />
+              <Node name="Resources" expanded="True">
+                <Node name="layout" expanded="True" />
+              </Node>
+              <Node name="Views" expanded="True" />
             </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.Kunicardus.Droid PreferredExecutionTarget="Android.Android_Accelerated_Oreo" />
+  <MonoDevelop.Ide.ItemProperties.Kunicardus.Droid AndroidDesignerPreferredTheme="UnicardTheme" AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.R5CR40DS3CV" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.Kunicardus-Touch PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.15BD2207-12E8-46E9-A3DC-2E9C36CD084D" />
+  <DisabledProjects>
+    <String>Kunicardus.Touch/Kunicardus-Touch.csproj</String>
+  </DisabledProjects>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <Debugger.DebugSourceFolders>
+    <String>/Users/Nino_Svanidze/Library/Caches/VisualStudio/8.0/Symbols/MvvmCross/MvvmCross/aa4ec9aee992491110fda990e745940391c1a6f3</String>
+  </Debugger.DebugSourceFolders>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/Nino_Svanidze/Projects/Unicard/unicard_app_base/Kunicardus.Droid/Fragments/HomePageFragment.cs" relfile="Kunicardus.Droid/Fragments/HomePageFragment.cs" line="114" column="1" />
+      <Breakpoint file="/Users/Nino_Svanidze/Projects/Unicard/unicard_app_base/Kunicardus.Droid/Fragments/HomePageFragment.cs" relfile="Kunicardus.Droid/Fragments/HomePageFragment.cs" line="149" column="1" />
+      <Breakpoint file="/Users/Nino_Svanidze/Projects/Unicard/unicard_app_base/Kunicardus.Droid/Views/MainView.cs" relfile="Kunicardus.Droid/Views/MainView.cs" line="208" column="1" />
+      <Breakpoint file="/Users/Nino_Svanidze/Projects/Unicard/unicard_app_base/Kunicardus.Droid/Views/MainView.cs" relfile="Kunicardus.Droid/Views/MainView.cs" line="203" column="1" />
+      <Catchpoint exceptionName="System.Exception" includeSubclasses="True" />
+      <Breakpoint file="/Users/Nino_Svanidze/Projects/Unicard/unicard_app_base/Kuni.Core/AppStart.cs" relfile="Kuni.Core/AppStart.cs" line="23" column="1" />
+      <Breakpoint file="/Users/Nino_Svanidze/Projects/Unicard/unicard_app_base/Kuni.Core/AppStart.cs" relfile="Kuni.Core/AppStart.cs" line="44" column="1" />
+      <Breakpoint file="/Users/Nino_Svanidze/Projects/Unicard/unicard_app_base/Kunicardus.Droid/Setup.cs" relfile="Kunicardus.Droid/Setup.cs" line="184" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>

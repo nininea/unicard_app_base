@@ -15,11 +15,11 @@
     <Compile Remove="Class1.cs" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="MvvmCross" Version="6.2.3" />
+    <PackageReference Include="MvvmCross" Version="8.0.2" />
     <PackageReference Include="sqlite-net-pcl" Version="1.5.231" />
-    <PackageReference Include="MvvmCross.Plugin.Color" Version="6.2.3" />
-    <PackageReference Include="MvvmCross.Plugin.File" Version="6.2.3" />
-    <PackageReference Include="MvvmCross.Plugin.Network" Version="6.2.3" />
+    <PackageReference Include="MvvmCross.Plugin.Color" Version="8.0.2" />
+    <PackageReference Include="MvvmCross.Plugin.File" Version="7.0.1" />
+    <PackageReference Include="MvvmCross.Plugin.Network" Version="7.0.1" />
     <PackageReference Include="System.ComponentModel.TypeConverter" Version="4.3.0" />
     <PackageReference Include="System.Xml.XmlDocument" Version="4.3.0" />
     <PackageReference Include="System.Runtime.Serialization.Primitives" Version="4.3.0" />

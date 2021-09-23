@@ -9,8 +9,6 @@ namespace Android.Gms.Maps.Utils.Geometry {
 	[global::Android.Runtime.Register ("com/google/maps/android/geometry/Point", DoNotGenerateAcw=true)]
 	public partial class Point : global::Java.Lang.Object {
 
-
-
 		// Metadata.xml XPath field reference: path="/api/package[@name='com.google.maps.android.geometry']/class[@name='Point']/field[@name='x']"
 		[Register ("x")]
 		public double X {
@@ -49,31 +47,38 @@ namespace Android.Gms.Maps.Utils.Geometry {
 				}
 			}
 		}
+
 		static readonly JniPeerMembers _members = new XAPeerMembers ("com/google/maps/android/geometry/Point", typeof (Point));
+
 		internal static IntPtr class_ref {
-			get {
-				return _members.JniPeerType.PeerReference.Handle;
-			}
+			get { return _members.JniPeerType.PeerReference.Handle; }
 		}
 
+		[global::System.Diagnostics.DebuggerBrowsable (global::System.Diagnostics.DebuggerBrowsableState.Never)]
+		[global::System.ComponentModel.EditorBrowsable (global::System.ComponentModel.EditorBrowsableState.Never)]
 		public override global::Java.Interop.JniPeerMembers JniPeerMembers {
 			get { return _members; }
 		}
 
+		[global::System.Diagnostics.DebuggerBrowsable (global::System.Diagnostics.DebuggerBrowsableState.Never)]
+		[global::System.ComponentModel.EditorBrowsable (global::System.ComponentModel.EditorBrowsableState.Never)]
 		protected override IntPtr ThresholdClass {
 			get { return _members.JniPeerType.PeerReference.Handle; }
 		}
 
+		[global::System.Diagnostics.DebuggerBrowsable (global::System.Diagnostics.DebuggerBrowsableState.Never)]
+		[global::System.ComponentModel.EditorBrowsable (global::System.ComponentModel.EditorBrowsableState.Never)]
 		protected override global::System.Type ThresholdType {
 			get { return _members.ManagedPeerType; }
 		}
 
-		protected Point (IntPtr javaReference, JniHandleOwnership transfer) : base (javaReference, transfer) {}
+		protected Point (IntPtr javaReference, JniHandleOwnership transfer) : base (javaReference, transfer)
+		{
+		}
 
 		// Metadata.xml XPath constructor reference: path="/api/package[@name='com.google.maps.android.geometry']/class[@name='Point']/constructor[@name='Point' and count(parameter)=2 and parameter[1][@type='double'] and parameter[2][@type='double']]"
 		[Register (".ctor", "(DD)V", "")]
-		public unsafe Point (double p0, double p1)
-			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
+		public unsafe Point (double p0, double p1) : base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
 			const string __id = "(DD)V";
 

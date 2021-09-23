@@ -9,7 +9,7 @@ using System.Threading;
 
 namespace Kunicardus.Droid
 {
-	public class AboutFragment : BaseMvxFragment
+	public class AboutFragment : BaseMvxFragment<AboutViewModel>
 	{
 		#region implemented abstract members of BaseMvxFragment
 
@@ -19,9 +19,9 @@ namespace Kunicardus.Droid
 
 		public override void OnActivate ()
 		{
-			if (this.ViewModel == null) {
-				this.ViewModel = (MvvmCross.ViewModels.IMvxViewModel)Mvx.IoCConstruct<AboutViewModel>();	
-			}
+			//if (this.ViewModel == null) {
+			//	this.ViewModel = (MvvmCross.ViewModels.IMvxViewModel)Mvx.IoCConstruct<AboutViewModel>();	
+			//}
 			StartWorker();
 		}
 

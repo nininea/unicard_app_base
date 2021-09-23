@@ -15,7 +15,7 @@ namespace Kunicardus.Droid.Helpers
 		public static Intent CreateIntent (this IMvxChildViewModelOwner View, IMvxViewModel subViewModel)
 		{
 			var translator = Mvx.IoCProvider.IoCConstruct<IMvxAndroidViewModelRequestTranslator> ();
-			var intentWithKey = translator.GetIntentWithKeyFor ((MvvmCross.ViewModels.IMvxViewModel)subViewModel);
+			var intentWithKey = translator.GetIntentWithKeyFor ((MvvmCross.ViewModels.IMvxViewModel)subViewModel,new MvxViewModelRequest());
 			View.OwnedSubViewModelIndicies.Add (intentWithKey.Item2);
 			return intentWithKey.Item1;
 		}

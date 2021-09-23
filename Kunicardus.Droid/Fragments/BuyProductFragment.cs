@@ -19,7 +19,7 @@ using MvvmCross.Platforms.Android.Binding.Views;
 
 namespace Kunicardus.Droid
 {
-	public class BuyProductFragment : MvxFragment, IOnBackPressedListener
+	public class BuyProductFragment : MvxFragment<BuyProductViewModel>, IOnBackPressedListener
 	{
 		MainView _context;
 
@@ -27,13 +27,13 @@ namespace Kunicardus.Droid
 
 		MvxFragment fragment = null;
 
-		public BuyProductFragment (BuyProductViewModel Viewmodel)
-		{
-			this.ViewModel = (MvvmCross.ViewModels.IMvxViewModel)Viewmodel;	
-		
-		}
+        public BuyProductFragment(BuyProductViewModel Viewmodel)
+        {
+            this.ViewModel = Viewmodel;
 
-		public string DisplayText {
+        }
+
+        public string DisplayText {
 			set {
 				if (_vm.OperationCompleted) {
 					ShowCompleteDialog ();

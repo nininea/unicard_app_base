@@ -17,7 +17,7 @@ namespace Kunicardus.Droid
 {
 	[Activity (Label = "MainRegister", NoHistory = false, WindowSoftInputMode = Android.Views.SoftInput.AdjustPan, ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait, Exported = true)]
 	[MvxViewFor (typeof(BaseRegisterViewModel))]
-	public class BaseRegisterView : MvxFragmentActivity
+	public class BaseRegisterView : MvxFragmentActivity<BaseRegisterViewModel>
 	{
 		#region  Private Variables
 

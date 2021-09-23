@@ -22,7 +22,7 @@ namespace Kunicardus.Droid
     [Activity(Label = "Unicard", NoHistory = false,
         LaunchMode = Android.Content.PM.LaunchMode.SingleTask,
         ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]
-    public class LoginView : MvxActivity, GraphRequest.IGraphJSONObjectCallback
+    public class LoginView : MvxActivity<LoginViewModel>, GraphRequest.IGraphJSONObjectCallback
     {
         public void OnCompleted(Org.Json.JSONObject p0, GraphResponse p1)
         {

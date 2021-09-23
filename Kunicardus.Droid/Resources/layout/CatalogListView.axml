@@ -9,7 +9,7 @@
     <include
         android:id="@+id/catalog_toolbar_layout"
         layout="@layout/cataloglisttoolbar" />
-    <android.support.v4.widget.SwipeRefreshLayout
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:id="@+id/refresher"
         android:layout_width="match_parent"
         android:layout_below="@id/catalog_toolbar_layout"
@@ -23,7 +23,7 @@
             android:background="@color/white"
             local:MvxBind="ItemsSource Products;"
             local:MvxItemTemplate="@layout/grid_product_item" />
-    </android.support.v4.widget.SwipeRefreshLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
     <ProgressBar
         android:id="@+id/loadingMore"
         style="?android:attr/progressBarStyle"

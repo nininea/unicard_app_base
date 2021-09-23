@@ -9,35 +9,39 @@ namespace Android.Gms.Maps.Utils.Quadtree {
 	[global::Android.Runtime.Register ("com/google/maps/android/quadtree/PointQuadTree", DoNotGenerateAcw=true)]
 	[global::Java.Interop.JavaTypeParameters (new string [] {"T extends com.google.maps.android.quadtree.PointQuadTree.Item"})]
 	public partial class PointQuadTree : global::Java.Lang.Object {
-
 		// Metadata.xml XPath interface reference: path="/api/package[@name='com.google.maps.android.quadtree']/interface[@name='PointQuadTree.Item']"
 		[Register ("com/google/maps/android/quadtree/PointQuadTree$Item", "", "Android.Gms.Maps.Utils.Quadtree.PointQuadTree/IItemInvoker")]
 		public partial interface IItem : IJavaObject, IJavaPeerable {
-
 			global::Android.Gms.Maps.Utils.Geometry.Point Point {
 				// Metadata.xml XPath method reference: path="/api/package[@name='com.google.maps.android.quadtree']/interface[@name='PointQuadTree.Item']/method[@name='getPoint' and count(parameter)=0]"
-				[Register ("getPoint", "()Lcom/google/maps/android/geometry/Point;", "GetGetPointHandler:Android.Gms.Maps.Utils.Quadtree.PointQuadTree/IItemInvoker, GoogleMapsUtility")] get;
+				[Register ("getPoint", "()Lcom/google/maps/android/geometry/Point;", "GetGetPointHandler:Android.Gms.Maps.Utils.Quadtree.PointQuadTree/IItemInvoker, GoogleMapsUtility")]
+				get; 
 			}
 
 		}
 
 		[global::Android.Runtime.Register ("com/google/maps/android/quadtree/PointQuadTree$Item", DoNotGenerateAcw=true)]
 		internal partial class IItemInvoker : global::Java.Lang.Object, IItem {
-
 			static readonly JniPeerMembers _members = new XAPeerMembers ("com/google/maps/android/quadtree/PointQuadTree$Item", typeof (IItemInvoker));
 
 			static IntPtr java_class_ref {
 				get { return _members.JniPeerType.PeerReference.Handle; }
 			}
 
+			[global::System.Diagnostics.DebuggerBrowsable (global::System.Diagnostics.DebuggerBrowsableState.Never)]
+			[global::System.ComponentModel.EditorBrowsable (global::System.ComponentModel.EditorBrowsableState.Never)]
 			public override global::Java.Interop.JniPeerMembers JniPeerMembers {
 				get { return _members; }
 			}
 
+			[global::System.Diagnostics.DebuggerBrowsable (global::System.Diagnostics.DebuggerBrowsableState.Never)]
+			[global::System.ComponentModel.EditorBrowsable (global::System.ComponentModel.EditorBrowsableState.Never)]
 			protected override IntPtr ThresholdClass {
 				get { return class_ref; }
 			}
 
+			[global::System.Diagnostics.DebuggerBrowsable (global::System.Diagnostics.DebuggerBrowsableState.Never)]
+			[global::System.ComponentModel.EditorBrowsable (global::System.ComponentModel.EditorBrowsableState.Never)]
 			protected override global::System.Type ThresholdType {
 				get { return _members.ManagedPeerType; }
 			}
@@ -52,8 +56,7 @@ namespace Android.Gms.Maps.Utils.Quadtree {
 			static IntPtr Validate (IntPtr handle)
 			{
 				if (!JNIEnv.IsInstanceOf (handle, java_class_ref))
-					throw new InvalidCastException (string.Format ("Unable to convert instance of type '{0}' to type '{1}'.",
-								JNIEnv.GetClassNameFromInstance (handle), "com.google.maps.android.quadtree.PointQuadTree.Item"));
+					throw new InvalidCastException ($"Unable to convert instance of type '{JNIEnv.GetClassNameFromInstance (handle)}' to type 'com.google.maps.android.quadtree.PointQuadTree.Item'.");
 				return handle;
 			}
 
@@ -99,32 +102,37 @@ namespace Android.Gms.Maps.Utils.Quadtree {
 
 		}
 
-
 		static readonly JniPeerMembers _members = new XAPeerMembers ("com/google/maps/android/quadtree/PointQuadTree", typeof (PointQuadTree));
+
 		internal static IntPtr class_ref {
-			get {
-				return _members.JniPeerType.PeerReference.Handle;
-			}
+			get { return _members.JniPeerType.PeerReference.Handle; }
 		}
 
+		[global::System.Diagnostics.DebuggerBrowsable (global::System.Diagnostics.DebuggerBrowsableState.Never)]
+		[global::System.ComponentModel.EditorBrowsable (global::System.ComponentModel.EditorBrowsableState.Never)]
 		public override global::Java.Interop.JniPeerMembers JniPeerMembers {
 			get { return _members; }
 		}
 
+		[global::System.Diagnostics.DebuggerBrowsable (global::System.Diagnostics.DebuggerBrowsableState.Never)]
+		[global::System.ComponentModel.EditorBrowsable (global::System.ComponentModel.EditorBrowsableState.Never)]
 		protected override IntPtr ThresholdClass {
 			get { return _members.JniPeerType.PeerReference.Handle; }
 		}
 
+		[global::System.Diagnostics.DebuggerBrowsable (global::System.Diagnostics.DebuggerBrowsableState.Never)]
+		[global::System.ComponentModel.EditorBrowsable (global::System.ComponentModel.EditorBrowsableState.Never)]
 		protected override global::System.Type ThresholdType {
 			get { return _members.ManagedPeerType; }
 		}
 
-		protected PointQuadTree (IntPtr javaReference, JniHandleOwnership transfer) : base (javaReference, transfer) {}
+		protected PointQuadTree (IntPtr javaReference, JniHandleOwnership transfer) : base (javaReference, transfer)
+		{
+		}
 
 		// Metadata.xml XPath constructor reference: path="/api/package[@name='com.google.maps.android.quadtree']/class[@name='PointQuadTree']/constructor[@name='PointQuadTree' and count(parameter)=1 and parameter[1][@type='com.google.maps.android.geometry.Bounds']]"
 		[Register (".ctor", "(Lcom/google/maps/android/geometry/Bounds;)V", "")]
-		public unsafe PointQuadTree (global::Android.Gms.Maps.Utils.Geometry.Bounds p0)
-			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
+		public unsafe PointQuadTree (global::Android.Gms.Maps.Utils.Geometry.Bounds p0) : base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
 			const string __id = "(Lcom/google/maps/android/geometry/Bounds;)V";
 
@@ -144,8 +152,7 @@ namespace Android.Gms.Maps.Utils.Quadtree {
 
 		// Metadata.xml XPath constructor reference: path="/api/package[@name='com.google.maps.android.quadtree']/class[@name='PointQuadTree']/constructor[@name='PointQuadTree' and count(parameter)=4 and parameter[1][@type='double'] and parameter[2][@type='double'] and parameter[3][@type='double'] and parameter[4][@type='double']]"
 		[Register (".ctor", "(DDDD)V", "")]
-		public unsafe PointQuadTree (double p0, double p1, double p2, double p3)
-			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
+		public unsafe PointQuadTree (double p0, double p1, double p2, double p3) : base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
 			const string __id = "(DDDD)V";
 

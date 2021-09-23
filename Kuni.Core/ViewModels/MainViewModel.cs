@@ -16,6 +16,7 @@ using MvvmCross;
 
 namespace Kuni.Core.ViewModels
 {
+    
     public class MainViewModel : BaseViewModel
     {
         private ILocalDbProvider _dbProvider;

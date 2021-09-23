@@ -8,8 +8,6 @@ namespace Android.Gms.Maps.Utils.UI {
 	// Metadata.xml XPath class reference: path="/api/package[@name='com.google.maps.android.ui']/class[@name='IconGenerator']"
 	[global::Android.Runtime.Register ("com/google/maps/android/ui/IconGenerator", DoNotGenerateAcw=true)]
 	public partial class IconGenerator : global::Java.Lang.Object {
-
-
 		// Metadata.xml XPath field reference: path="/api/package[@name='com.google.maps.android.ui']/class[@name='IconGenerator']/field[@name='STYLE_BLUE']"
 		[Register ("STYLE_BLUE")]
 		public const int StyleBlue = (int) 4;
@@ -37,31 +35,38 @@ namespace Android.Gms.Maps.Utils.UI {
 		// Metadata.xml XPath field reference: path="/api/package[@name='com.google.maps.android.ui']/class[@name='IconGenerator']/field[@name='STYLE_WHITE']"
 		[Register ("STYLE_WHITE")]
 		public const int StyleWhite = (int) 2;
+
 		static readonly JniPeerMembers _members = new XAPeerMembers ("com/google/maps/android/ui/IconGenerator", typeof (IconGenerator));
+
 		internal static IntPtr class_ref {
-			get {
-				return _members.JniPeerType.PeerReference.Handle;
-			}
+			get { return _members.JniPeerType.PeerReference.Handle; }
 		}
 
+		[global::System.Diagnostics.DebuggerBrowsable (global::System.Diagnostics.DebuggerBrowsableState.Never)]
+		[global::System.ComponentModel.EditorBrowsable (global::System.ComponentModel.EditorBrowsableState.Never)]
 		public override global::Java.Interop.JniPeerMembers JniPeerMembers {
 			get { return _members; }
 		}
 
+		[global::System.Diagnostics.DebuggerBrowsable (global::System.Diagnostics.DebuggerBrowsableState.Never)]
+		[global::System.ComponentModel.EditorBrowsable (global::System.ComponentModel.EditorBrowsableState.Never)]
 		protected override IntPtr ThresholdClass {
 			get { return _members.JniPeerType.PeerReference.Handle; }
 		}
 
+		[global::System.Diagnostics.DebuggerBrowsable (global::System.Diagnostics.DebuggerBrowsableState.Never)]
+		[global::System.ComponentModel.EditorBrowsable (global::System.ComponentModel.EditorBrowsableState.Never)]
 		protected override global::System.Type ThresholdType {
 			get { return _members.ManagedPeerType; }
 		}
 
-		protected IconGenerator (IntPtr javaReference, JniHandleOwnership transfer) : base (javaReference, transfer) {}
+		protected IconGenerator (IntPtr javaReference, JniHandleOwnership transfer) : base (javaReference, transfer)
+		{
+		}
 
 		// Metadata.xml XPath constructor reference: path="/api/package[@name='com.google.maps.android.ui']/class[@name='IconGenerator']/constructor[@name='IconGenerator' and count(parameter)=1 and parameter[1][@type='android.content.Context']]"
 		[Register (".ctor", "(Landroid/content/Context;)V", "")]
-		public unsafe IconGenerator (global::Android.Content.Context p0)
-			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
+		public unsafe IconGenerator (global::Android.Content.Context p0) : base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
 			const string __id = "(Landroid/content/Context;)V";
 

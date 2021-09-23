@@ -25,7 +25,7 @@ using System.Threading;
 
 namespace Kunicardus.Droid
 {
-    public class HomePageFragment : BaseMvxFragment, Android.Widget.AdapterView.IOnItemClickListener, View.IOnTouchListener, Animation.IAnimationListener
+    public class HomePageFragment : BaseMvxFragment<HomePageViewModel>, Android.Widget.AdapterView.IOnItemClickListener, View.IOnTouchListener, Animation.IAnimationListener
     {
         public bool AlertsUpdated
         {

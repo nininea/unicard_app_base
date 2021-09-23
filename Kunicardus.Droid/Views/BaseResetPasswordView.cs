@@ -10,7 +10,7 @@ using MvvmCross.Droid.Support.V4;
 namespace Kunicardus.Droid.Views
 {
 	[Activity (ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait, Exported = true)]
-	public class BaseResetPasswordView : MvxFragmentActivity
+	public class BaseResetPasswordView : MvxFragmentActivity<BaseResetPasswordViewModel>
 	{
 		#region Native Methods
 

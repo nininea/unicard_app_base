@@ -4,9 +4,7 @@ using System;
 using System.Globalization;
 using System.Text;
 using MvvmCross.Converters;
-using MvvmCross;
-//using MvvmCross.UI;
-using MvvmCross.UI;
+using System.Drawing;
 
 namespace Kuni.Core.Converters
 {
@@ -165,45 +163,45 @@ namespace Kuni.Core.Converters
 
 	public class iOSPointsColorValueConverter : MvxColorValueConverter
 	{
-        protected override MvvmCross.UI.MvxColor Convert(object value, object parameter, CultureInfo culture)
-        {
+        protected override Color Convert(object value, object parameter, CultureInfo culture)
+        { 
             double points = (double)value;
 
             if (points < 0)
             {
-                return new MvvmCross.UI.MvxColor(242, 142, 45);
+                return Color.FromArgb(242, 142, 45);
             }
             else
             {
-                return new MvxColor(140, 189, 58);
+                return Color.FromArgb(140, 189, 58);
             }
         }
     }
 
 	public class NewsIsReadColorConverter : MvxColorValueConverter
 	{
-		protected override MvxColor Convert (object value, object parameter, CultureInfo culture)
+		protected override Color Convert (object value, object parameter, CultureInfo culture)
 		{
 			bool isRead = (bool)value;
 
 			if (isRead) {
-				return new MvxColor (146, 145, 145);
+				return Color.FromArgb (146, 145, 145);
 			} else {
-				return new MvxColor (0, 0, 0);
+				return Color.FromArgb (0, 0, 0);
 			}
 		}
 	}
 
 	public class PointsColorValueConverter : MvxColorValueConverter
 	{
-		protected override MvxColor Convert (object value, object parameter, CultureInfo culture)
+		protected override Color Convert (object value, object parameter, CultureInfo culture)
 		{
 			double points = (double)parameter;
 
 			if (points < 0) {
-				return new MvxColor (242, 142, 45);
+				return Color.FromArgb (242, 142, 45);
 			} else {
-				return new MvxColor (140, 189, 58);
+				return Color.FromArgb (140, 189, 58);
 			}
 		}
 	}
@@ -221,40 +219,40 @@ namespace Kuni.Core.Converters
 			}
 		}
 
-		protected override MvxColor Convert (object value, object parameter, CultureInfo culture)
+		protected override Color Convert (object value, object parameter, CultureInfo culture)
 		{			
 			if (ShouldValidate && (value == null || string.IsNullOrWhiteSpace (value.ToString ()))) {
 				// red;
-				return new MvxColor (255, 109, 64);
+				return Color.FromArgb (255, 109, 64);
 			} else {
 				// green
 //				if (!_shoudlValidate) {
 //					_shoudlValidate = true;
 //				}
-				return new MvxColor (185, 240, 80);
+				return Color.FromArgb (185, 240, 80);
 			}						
 		}
 	}
 
 	public class ValidationColorValueConverter : MvxColorValueConverter
 	{
-		protected override MvxColor Convert (object value, object parameter, CultureInfo culture)
+		protected override Color Convert (object value, object parameter, CultureInfo culture)
 		{
 			var shouldValidate = (bool)parameter;
 			if (shouldValidate && (value == null || string.IsNullOrWhiteSpace (value.ToString ()))) {
 				
 				// red;
-				return new MvxColor (255, 109, 64);
+				return Color.FromArgb (255, 109, 64);
 			} else {
 				// green
-				return new MvxColor (185, 240, 80);
+				return Color.FromArgb (185, 240, 80);
 			}						
 		}
 	}
 
 	public class CardNumberValidationColorValueConverter : MvxColorValueConverter
 	{
-		protected override MvxColor Convert (object value, object parameter, CultureInfo culture)
+		protected override Color Convert (object value, object parameter, CultureInfo culture)
 		{
 			var shouldValidate = (bool)parameter;
 			if (shouldValidate
@@ -264,14 +262,14 @@ namespace Kuni.Core.Converters
 			    string.IsNullOrWhiteSpace (value.ToString ()))) {
 
 				// red;
-				return new MvxColor (255, 109, 64);
+				return Color.FromArgb (255, 109, 64);
 			} else if (shouldValidate
 			           && value != null && value.ToString ().Length != 4) {
 				// red;
-				return new MvxColor (255, 109, 64);
+				return Color.FromArgb (255, 109, 64);
 			} else {
 				// green
-				return new MvxColor (185, 240, 80);
+				return Color.FromArgb (185, 240, 80);
 			}						
 		}
 	}
