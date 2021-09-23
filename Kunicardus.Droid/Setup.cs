@@ -24,19 +24,24 @@ using Kunicardus.Droid.Plugins.UIDialogPlugin;
 using Kunicardus.Droid.Plugins.UIThreadPlugin;
 using Kunicardus.Droid.Providers.DroidSqLiteProvider;
 using Kunicardus.Droid.Views;
+using Microsoft.Extensions.Logging;
 //using MvvmCross.Droid.Platform;
 using MvvmCross;
+using MvvmCross.Core;
+using MvvmCross.IoC;
 //using MvvmCross.Binding.Droid.Views;
 using MvvmCross.Platforms.Android.Binding.Views;
 using MvvmCross.Platforms.Android.Core;
+using MvvmCross.Platforms.Android.Presenters;
 using MvvmCross.Platforms.Android.Views;
 //using MvvmCross.Platforms.Android.Core;
 using MvvmCross.Plugin.File;
+using MvvmCross.ViewModels;
 using MvvmCross.Views;
 
 namespace Kunicardus.Droid
 {
-    public class Setup : MvxAndroidSetup
+    public class Setup : MvxAndroidSetup<App>
     {
         public static string PicturesPath
         {
@@ -48,28 +53,30 @@ namespace Kunicardus.Droid
             }
         }
 
-        public Setup() : base()
-        {
 
+        protected override ILoggerProvider CreateLogProvider()
+        {
+            return null;
         }
 
-        public Setup(Context applicationContext) : base()
-		{
-		}
-
-        protected override MvvmCross.ViewModels.IMvxApplication CreateApp()
+        protected override ILoggerFactory CreateLogFactory()
         {
-            Mvx.IoCProvider.RegisterType<IUIDialogPlugin, DroidUIDialogPlugin>();
-            InitializeIoc();
+            return null;
+        }
+
+        protected override IMvxApplication CreateApp(IMvxIoCProvider iocProvider)
+        {
+            iocProvider.RegisterType<IUIDialogPlugin, DroidUIDialogPlugin>();
+            InitializeIoc(iocProvider);
             return new App();
         }
 
-		protected override void InitializeLastChance ()
-		{
-			base.InitializeLastChance ();
+        protected override void InitializeLastChance(IMvxIoCProvider iocProvider)
+        {
+            base.InitializeLastChance(iocProvider);
 
-			CreateConfigIfNotExists ();
-		}
+            CreateConfigIfNotExists(iocProvider);
+        }
 
         protected override IEnumerable<Assembly> AndroidViewAssemblies {
 			get {
@@ -91,11 +98,16 @@ namespace Kunicardus.Droid
 			}
 		}
 
-		private void CreateConfigIfNotExists ()
+        protected override IMvxAndroidViewPresenter CreateViewPresenter()
+        {
+            return new MvxAndroidViewPresenter(AndroidViewAssemblies);
+        }
+
+        private void CreateConfigIfNotExists (IMvxIoCProvider iocProvider)
 		{
-			var fileStore = Mvx.IoCProvider.Resolve<IMvxFileStore> ();
-			var device = Mvx.IoCProvider.Resolve<IDevice> ();
-			var bundleConfig = Mvx.IoCProvider.Resolve<IConfigBundlePlugin> ();
+			var fileStore = iocProvider.Resolve<IMvxFileStore> ();
+			var device = iocProvider.Resolve<IDevice> ();
+			var bundleConfig = iocProvider.Resolve<IConfigBundlePlugin> ();
 			var fullPath = fileStore.PathCombine (device.DataPath, Constants.ConfigFileName);
 
 			fileStore.EnsureFolderExists (device.DataPath);
@@ -107,29 +119,34 @@ namespace Kunicardus.Droid
 			fileStore.WriteFile (fullPath, bundleConfig.ConfigText);
 		}
 
-		protected void InitializeIoc ()
+		protected void InitializeIoc (IMvxIoCProvider iocProvider)
 		{
             //base.InitializeIoC();
-            Mvx.IoCProvider.RegisterType<IMvxViewsContainer, ViewsContainer>();
-            Mvx.IoCProvider.RegisterType<IDevice, DroidDevicePlugin> ();
-			Mvx.IoCProvider.RegisterType<IConfigBundlePlugin, DroidConfigBundleProvider> ();
-			Mvx.IoCProvider.RegisterType<IAppSettings, AppSettings> ();
-			Mvx.IoCProvider.RegisterType<ILocalDbProvider, DroidSqLiteProvider> ();
-			Mvx.IoCProvider.RegisterType<IConnectivityPlugin, DroidConnectivityProviderPlugin> ();
-			Mvx.IoCProvider.RegisterType<ILoggerService, CoreLogger> ();
-			Mvx.IoCProvider.RegisterType<IUnicardApiProvider, UnicardApiProvider> ();
-			Mvx.IoCProvider.RegisterType<IAuthService,AuthService> ();
-			Mvx.IoCProvider.RegisterType<IUIThreadPlugin,UIThreadPlugin> ();
-			Mvx.IoCProvider.RegisterType<ICustomSecurityProvider,CustomSecurityProvider> ();
-			Mvx.IoCProvider.RegisterType<IConfigReader, ConfigReader> ();
-			Mvx.IoCProvider.RegisterType<IGoogleAnalyticsService, GoogleAnalyticsDroid> ();
-            Mvx.IoCProvider.RegisterType<IUserService, UserService>();
-            Mvx.IoCProvider.RegisterType<IProductsService, ProductsService>();
-            Mvx.IoCProvider.RegisterType<INewsService, NewsService>();
+            iocProvider.RegisterType<IMvxViewsContainer, ViewsContainer>();
+            iocProvider.RegisterType<IDevice, DroidDevicePlugin> ();
+			iocProvider.RegisterType<IConfigBundlePlugin, DroidConfigBundleProvider> ();
+			iocProvider.RegisterType<IAppSettings, AppSettings> ();
+			iocProvider.RegisterType<ILocalDbProvider, DroidSqLiteProvider> ();
+			iocProvider.RegisterType<IConnectivityPlugin, DroidConnectivityProviderPlugin> ();
+			iocProvider.RegisterType<ILoggerService, CoreLogger> ();
+			iocProvider.RegisterType<IUnicardApiProvider, UnicardApiProvider> ();
+			iocProvider.RegisterType<IAuthService,AuthService> ();
+			iocProvider.RegisterType<IUIThreadPlugin,UIThreadPlugin> ();
+			iocProvider.RegisterType<ICustomSecurityProvider,CustomSecurityProvider> ();
+			iocProvider.RegisterType<IConfigReader, ConfigReader> ();
+			iocProvider.RegisterType<IGoogleAnalyticsService, GoogleAnalyticsDroid> ();
+            iocProvider.RegisterType<IUserService, UserService>();
+            iocProvider.RegisterType<IProductsService, ProductsService>();
+            iocProvider.RegisterType<INewsService, NewsService>();
         }
 
-        protected override void InitializeViewLookup()
+        protected override IDictionary<Type, Type> InitializeLookupDictionary(IMvxIoCProvider iocProvider)
         {
+            //    return base.InitializeLookupDictionary(iocProvider);
+            //}
+
+            //protected override IMvxViewsContainer InitializeViewLookup(IDictionary<Type, Type> viewModelViewLookup, IMvxIoCProvider iocProvider)
+            //{
             var viewModelViewLookup = new Dictionary<Type, Type>()
             {
                 { typeof (LoginViewModel), typeof(LoginView) },
@@ -161,9 +178,10 @@ namespace Kunicardus.Droid
                 { typeof (NewsDetailsViewModel), typeof(NewsDetailsView) },
                 { typeof (OrganizationDetailsViewModel), typeof(OrganizationDetailsViewModel) },
             };
-
-            var container = Mvx.IoCProvider.Resolve<IMvxViewsContainer>();
+            var container = iocProvider.Resolve<IMvxViewsContainer>();
             container.AddAll(viewModelViewLookup);
+
+            return viewModelViewLookup;
         }
 
     }
